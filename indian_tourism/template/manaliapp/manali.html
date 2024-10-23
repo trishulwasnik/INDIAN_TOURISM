@@ -1,0 +1,30 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Document</title>
+</head>
+<body>
+<div class="container" align="center">
+    {% if send %}
+    <h1>Thank you for providing your information</h1>
+    <h1>please enter the information</h1>
+    {% else %}
+    <h1> Information Submitted</h1>
+
+    {% endif %}
+
+
+
+<form method="POST">
+{{form}}
+{% csrf_token %}
+
+    <input type="submit" class="btn btn-lg btn-primary" vlaue="Registraion">
+</form>
+</div>
+</body>
+</html>
